@@ -43,18 +43,19 @@ int main() {
 
     printf("Printing the averages of ages in an array\n");
     // Calculate the Average for the different ages in an Array
-    int ages[] = {10, 20, 30, 40, 50 ,15 ,20 ,25 ,30 ,35};
+    int ages[] = {20, 22, 18, 35, 48, 26, 87, 70};
+    int length = sizeof(ages)/sizeof(ages[0]);
     int sum = 0;
-    for (int i = 0; i < 10; i++)
+    for (int i = 0; i < length; i++)
     {
         sum += ages[i];
     }
-    printf("The average age is: %f\n\n", (float)sum/10);
+    printf("The average age is: %.2f\n\n", (float)sum/length);
 
 
     printf("Finding the lowest age in the array\n");
     int minAge = ages[0];
-    for (int i = 1; i < 10; i++)
+    for (int i = 1; i < length; i++)
     {
         if (ages[i] < minAge)
         {
